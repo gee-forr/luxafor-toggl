@@ -26,7 +26,7 @@ module Luxafor
       # ValueSemantics::MissingAttributes,
     ].freeze
 
-    attr_writer :toggl_key, :luxafor_key, :state_file
+    attr_writer :toggl_key, :luxafor_key, :state_file, :idle_time
 
     def toggl_key
       @toggl_key || ENV.fetch('TOGGL_KEY')
@@ -38,6 +38,10 @@ module Luxafor
 
     def state_file
       @state ||= ENV.fetch("LUXAFOR_TOGGL_STATE_FILE", "/tmp/#{Etc.getpwuid(Process.euid).name}-luxafor-toggle-state.json")
+    end
+
+    def idle_time
+      @idle_time ||= ENV.fetch("LUXAFOR_TOGGL_IDLE_TIME", 60 * 60 * 2).to_i # Default is 2 hours before you're idle
     end
 
     def toggl_client

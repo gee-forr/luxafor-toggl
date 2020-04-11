@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'luxafor/toggl'
+
+client = Luxafor::Toggl::Client.new
+
+client.execute!

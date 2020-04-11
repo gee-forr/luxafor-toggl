@@ -41,7 +41,7 @@ module Luxafor
     end
 
     def toggl_client
-      @toggl_client ||= TogglV8::API.new(toggle_key)
+      @toggl_client ||= TogglV8::API.new(toggl_key)
     end
 
     def luxafor_client

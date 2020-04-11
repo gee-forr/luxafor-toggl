@@ -1,4 +1,13 @@
+require "awesome_print"
+require "date"
+require "value_semantics"
+
+require 'luxafor'
+require 'togglv8'
+
 require "luxafor/toggl/version"
+require "luxafor/toggl/client"
+require "luxafor/toggl/state"
 
 module Luxafor
   module Toggl

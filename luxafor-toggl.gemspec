@@ -28,13 +28,12 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "rake",    "~> 10.0"
-  spec.add_development_dependency "rspec",   "~> 3.0"
+  spec.add_development_dependency 'awesome_print', '~> 1.8.0'
+  spec.add_development_dependency 'bundler',       '~> 2.0'
+  spec.add_development_dependency 'pry',           '0.13.1'
+  spec.add_development_dependency 'rake',          '~> 10.0'
+  spec.add_development_dependency 'rspec',         '~> 3.0'
 
-  spec.add_development_dependency "pry"
-
-  spec.add_dependency "awesome_print"
   spec.add_dependency 'luxafor',         '~> 0.1.0'
   spec.add_dependency 'oj',              '~> 3.10', '>= 3.10.6'
   spec.add_dependency 'togglv8',         '~> 1.2',  '>= 1.2.1'

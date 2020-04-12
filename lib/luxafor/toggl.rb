@@ -45,7 +45,7 @@ module Luxafor
     end
 
     def state_file
-      @state ||= ENV.fetch("LUXAFOR_TOGGL_STATE_FILE", "/tmp/#{Etc.getpwuid(Process.euid).name}-luxafor-toggle-state.json")
+      @state ||= ENV.fetch("LUXAFOR_TOGGL_STATE_FILE", "/tmp/#{Etc.getpwuid(Process.euid).name}-luxafor-toggl-state.json")
     end
 
     def idle_time

@@ -1,6 +1,6 @@
-require "awesome_print"
 require "date"
 require "value_semantics"
+# require "awesome_print"
 
 require 'luxafor'
 require 'togglv8'

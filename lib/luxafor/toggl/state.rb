@@ -13,6 +13,8 @@ module Luxafor
       end
 
       def self.coerce_as_of(value)
+        return value if value.is_a? DateTime
+
         DateTime.parse(value)
       end
 

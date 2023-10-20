@@ -22,8 +22,8 @@ module Luxafor
       attr_reader :toggl, :luxafor, :state_file
 
       def latest_task
-        start         = DateTime.now - 1
-        @_latest_task = toggl.get_time_entries(start_date: start).max_by { |task| Time.parse(task["stop"]) }
+        start           = DateTime.now - 1
+        @_latest_task ||= toggl.get_time_entries(start_date: start).max_by { |task| Time.parse(task["start"]) }
       end
 
       def current_state

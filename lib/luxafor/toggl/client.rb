@@ -23,7 +23,7 @@ module Luxafor
 
       def latest_task
         start         = DateTime.now - 1
-        @_latest_task = toggl.get_time_entries(start_date: start).last
+        @_latest_task = toggl.get_time_entries(start_date: start).max_by { |task| Time.parse(task["stop"]) }
       end
 
       def current_state
